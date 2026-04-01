@@ -1,0 +1,131 @@
+:root {
+  font-family: Inter, system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #0f1115;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 1rem;
+  transition: background 0.2s ease;
+}
+
+.app.dark {
+  background: #0f1115;
+  color: #f5f8ff;
+}
+
+.app.light {
+  background: #f4f6fb;
+  color: #1e2533;
+}
+
+.app-header {
+  margin: 0 auto 1rem;
+  max-width: 1200px;
+}
+
+.panel {
+  max-width: 1200px;
+  margin: 0 auto 1rem;
+  padding: 1rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(4px);
+}
+
+.toolbar,
+.preview-row {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.drop-zone {
+  border: 1px dashed #7e8db2;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.preview-card {
+  width: 120px;
+}
+
+.preview-card img,
+.preview-card video {
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.gallery {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 0.85rem;
+}
+
+.media-card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.media-card img,
+.media-card video {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  font-size: 0.82rem;
+}
+
+.unstyled {
+  border: none;
+  padding: 0;
+  width: 100%;
+  background: none;
+}
+
+.viewer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: grid;
+  place-items: center;
+}
+
+.viewer {
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.viewer img,
+.viewer video {
+  max-width: 90vw;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+.load-sentinel {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .toolbar {
+    flex-direction: column;
+  }
+}
